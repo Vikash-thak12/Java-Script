@@ -181,4 +181,4 @@ div2.before(newbtn1);
 
 let new_para = document.querySelector("p");
 
-
+new_para.classList.add("new_paragraph");
