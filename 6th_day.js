@@ -81,13 +81,13 @@
 // 1. Create a h2 heading element with text :  "hello JavaSCript". Append "From Apna College Students" to this text using JS.
 // 2. Create 3 divs with common class name - "box". Access them and add some unique text to each of them 
 
-let h2 = document.querySelector("h2");
-console.log(h2);
-h2.innerText = h2.innerText + "from apna college students";
+// let h2 = document.querySelector("h2");
+// console.log(h2);
+// h2.innerText = h2.innerText + "from apna college students";
 
 
 
-let divs= document.querySelectorAll(".box");
+// let divs= document.querySelectorAll(".box");
 // console.dir(divs);
 // divs[0].innerText = "The land of lord Rama";
 // divs[1].innerText = "The land of lord Krishna";
@@ -95,9 +95,38 @@ let divs= document.querySelectorAll(".box");
 
 
 // using loop to change the value of each div 
-let idx = 1;
-for(div of divs)
-{
-    div.innerText = `The value of the curent Div is: ${idx}`;
-    idx++;
-}
+// let idx = 1;
+// for(div of divs)
+// {
+//     div.innerText = `The value of the curent Div is: ${idx}`;
+//     idx++;
+// }
+
+
+
+
+
+
+// Attributes of DOM 
+// Attributes are nothing but provides addidional information about an html element. Example id, class, href, src,etc
+//getattribute(attribute)  used to get value of the attribute 
+let div = document.querySelector("div");
+console.log(div);
+
+let id = div.getAttribute("id");
+console.log(id);
+
+// let para1 = document.querySelector("p");
+// console.log(para1.getAttribute("class"));
+
+
+
+//setattribute(attribute, value) used to change the value of the attribute 
+let para = document.querySelector("p");
+console.log(para.setAttribute("class", "vikash"));
+
+
+
+//style 
+let div2 = document.querySelector("div");
+div2.style.backgroundColor = "green";
