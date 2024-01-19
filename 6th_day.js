@@ -88,7 +88,16 @@ h2.innerText = h2.innerText + "from apna college students";
 
 
 let divs= document.querySelectorAll(".box");
-console.dir(divs);
-divs[0].innerText = "The land of lord Rama";
-divs[1].innerText = "The land of lord Krishna";
-divs[2].innerText = "The land of lord Shiva";
+// console.dir(divs);
+// divs[0].innerText = "The land of lord Rama";
+// divs[1].innerText = "The land of lord Krishna";
+// divs[2].innerText = "The land of lord Shiva";
+
+
+// using loop to change the value of each div 
+let idx = 1;
+for(div of divs)
+{
+    div.innerText = `The value of the curent Div is: ${idx}`;
+    idx++;
+}
