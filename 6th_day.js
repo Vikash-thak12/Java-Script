@@ -130,3 +130,55 @@ console.log(para.setAttribute("class", "vikash"));
 //style 
 let div2 = document.querySelector("div");
 div2.style.backgroundColor = "green";
+
+
+//Insert elements in DOM manipulation 
+// Node.append(el)  adds at the end of the node(inside)
+// node.prepend(el)  adds at the start of the node (inside)
+// node.before(el) add before the node(outside) 
+// node.after(el) adds after the node(outside)
+
+
+let newbtn = document.createElement("button");
+newbtn.innerText = " Click me!";
+console.log(newbtn);
+
+
+ 
+div2.prepend(newbtn);
+div2.before(newbtn);
+div2.after(newbtn);
+div2.append(newbtn);
+
+
+
+let new_heading = document.createElement("h2");
+new_heading.innerText = " Welcome To The Heading: ";
+console.log(new_heading);
+
+
+div2.before(new_heading);
+para.remove();   // remove the paragraph from the html page 
+new_heading.remove();
+
+
+
+// Questions
+// 1. Create a new button element. Give it a text "Click me", background color of red and text color of white.
+//    Insert the button as the first element insert the body tag
+
+
+let newbtn1 = document.createElement("button");
+newbtn1.innerText = "Click me!";
+newbtn1.style.background = "red";
+newbtn1.style.color = "white";
+div2.before(newbtn1);
+
+
+// 2. Create a <p> tag in html, give it a class and some styling 
+//    Now create a new class in css and try to append this class to the <p> Element.
+
+
+let new_para = document.querySelector("p");
+
+
