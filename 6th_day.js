@@ -60,5 +60,35 @@
 // innerhtml = returns the plain text or html contents  in the element 
 // textcontent = returns textual content even for hidden elements
 
-let ele = document.querySelector("p");
-console.log(ele);
+// let ele = document.querySelector("p");
+// console.log(ele);
+
+// let div = document.querySelector("div");
+// console.log(div);
+// console.dir(div);
+
+
+//difference between innettext and innerhtml 
+// innerTEXT going to reutrn the actual plain text where as innerHTML going to return the plain text with its tags
+
+// let h1 = document.querySelector("h1");
+// console.dir(h1);
+
+
+
+
+// //Questions:
+// 1. Create a h2 heading element with text :  "hello JavaSCript". Append "From Apna College Students" to this text using JS.
+// 2. Create 3 divs with common class name - "box". Access them and add some unique text to each of them 
+
+let h2 = document.querySelector("h2");
+console.log(h2);
+h2.innerText = h2.innerText + "from apna college students";
+
+
+
+let divs= document.querySelectorAll(".box");
+console.dir(divs);
+divs[0].innerText = "The land of lord Rama";
+divs[1].innerText = "The land of lord Krishna";
+divs[2].innerText = "The land of lord Shiva";
