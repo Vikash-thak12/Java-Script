@@ -52,3 +52,54 @@ const Vikash1 = {
 };
 
 Vikash1.__proto__ = employee1;
+
+
+// Classes in JavaScript
+// A class is a blueprint for creating objects with similar properties and methods.
+
+class ToyataCar {
+
+    constructor() {
+        console.log("This is a constructor and automatically invocked by the object: ")
+    }
+    start () {
+        console.log("Start: ")
+    }
+
+    stop () {
+        console.log("stop:")
+    }
+    
+    setbrand(brand) {
+        this.brandName = "Brand ";
+    }
+}
+
+let Mercedies = new ToyataCar();
+Mercedies.setbrand("Vikash");
+
+
+class Class {
+    constructor(vikash) {
+        console.log("Creating the list of the students: ");
+        this.Brandvikash = vikash;
+
+    }
+}
+
+let pupil = new Class();
+
+
+// Inheritance 
+// Inheritance is passing down properties and methods from parent class to chlil class
+
+class Parent {
+    fn1()
+    {
+        console.log("This is the Parent Class: ")
+    }
+};
+
+class child extends Parent {};
+
+let Newobj = new child();
