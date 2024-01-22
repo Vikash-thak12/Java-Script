@@ -20,3 +20,18 @@ setTimeout( () => {
 
 console.log("Seven");
 console.log("Eight");
+
+
+
+// callback
+// function passed as an argument in another functoin is known as callback 
+
+function sum (a,b) {
+    console.log(a+b);
+};
+
+function calculator (a,b,sumcallback) {  //here the sumcallback function is sum function which is called in another function so known as callback 
+    sumcallback(a,b);
+}
+
+calculator(3,4,sum);
