@@ -7,7 +7,7 @@ const student = {
 };
 
 
-const employee = 
+const employee =
 {
     calcTax() {
         console.log("The tax is 10%: ");
@@ -33,7 +33,7 @@ Vikash.__proto__ = employee;
 // If object and prototype have same method, 
 // object's method will be used
 
-const employee1 = 
+const employee1 =
 {
     calcTax() {
         console.log("The tax is 10%: ");
@@ -62,14 +62,14 @@ class ToyataCar {
     constructor() {
         console.log("This is a constructor and automatically invocked by the object: ")
     }
-    start () {
+    start() {
         console.log("Start: ")
     }
 
-    stop () {
+    stop() {
         console.log("stop:")
     }
-    
+
     setbrand(brand) {
         this.brandName = "Brand ";
     }
@@ -94,13 +94,12 @@ let pupil = new Class();
 // Inheritance is passing down properties and methods from parent class to chlil class
 
 class Parent {
-    fn1()
-    {
+    fn1() {
         console.log("This is the Parent Class: ")
     }
 };
 
-class child extends Parent {};
+class child extends Parent { };
 
 let Newobj = new child();
 
@@ -121,7 +120,7 @@ class person {
     }
 }
 
-class engineer extends person{
+class engineer extends person {
     work() {
         console.log("Can work, solve problems and bulid something new:: ");
     }
@@ -142,14 +141,13 @@ class Animal {
 };
 
 class Dog extends Animal {
-    constructor(name, breed){
+    constructor(name, breed) {
         super(name);
         this.breed = breed;
 
     }
 
-    walk()
-    {
+    walk() {
         super.eat();  // Used so that the functon eat() can be called when we execute the walk function 
         console.log(`${this.name} is ready for walking: `);
     }
@@ -158,3 +156,38 @@ class Dog extends Animal {
 };
 
 let dogobj = new Dog("Tommy", "German Shepyard:");
+
+// Question:
+// You are creating a website for your college. Create a class user with 2 properties name and email. It also has a method 
+// called viewData() that allows user to view website data
+
+
+let data = "The information is secret:"
+class User {
+    constructor(name, email) {
+        this.Name = name;
+        this.Email = email;
+    }
+
+    viewData() {
+        console.log(" Data:", data);
+    }
+}
+
+let user1 = new User("Vikash", "thakvikash622@gmail.com");
+
+
+// Create a new class called Admin which inherits from user. Add a new method called editData to Admin that allows it to edit website data
+
+class Admin extends User {
+    constructor(name, email) {
+        super(name, email);
+    }
+
+    editData() {
+
+        data = "The information is safe for you:"
+    }
+};
+
+let admin1 = new Admin("Sharma", "sharmabikash544@gmail.com");
