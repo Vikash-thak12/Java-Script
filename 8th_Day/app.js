@@ -191,3 +191,22 @@ class Admin extends User {
 };
 
 let admin1 = new Admin("Sharma", "sharmabikash544@gmail.com");
+
+
+
+// Error Handling in JS
+
+
+let a = 20; 
+let b = 30; 
+
+console.log("A: ", a);
+console.log("B: ", b);
+
+try {
+    console.log("a+b", a+c);
+} 
+catch(err) {
+    console.log(err);
+}
+console.log("A+B:", a+b);
