@@ -103,3 +103,58 @@ class Parent {
 class child extends Parent {};
 
 let Newobj = new child();
+
+
+//Another Example 
+
+class person {
+
+    constructor() {
+        this.Display = "Homo Sapiens: ";
+    }
+    eat() {
+        console.log("Can eat: ");
+    }
+
+    sleep() {
+        console.log("Can Sleep: ");
+    }
+}
+
+class engineer extends person{
+    work() {
+        console.log("Can work, solve problems and bulid something new:: ");
+    }
+}
+
+let vikashobj = new engineer();
+
+//Super keyword
+
+class Animal {
+    constructor(name) {
+        this.name = name;
+    }
+    eat() {
+        console.log(`${this.name} have done it lunch: `);
+    }
+
+};
+
+class Dog extends Animal {
+    constructor(name, breed){
+        super(name);
+        this.breed = breed;
+
+    }
+
+    walk()
+    {
+        super.eat();  // Used so that the functon eat() can be called when we execute the walk function 
+        console.log(`${this.name} is ready for walking: `);
+    }
+
+
+};
+
+let dogobj = new Dog("Tommy", "German Shepyard:");
