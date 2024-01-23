@@ -73,32 +73,50 @@
 // cleaner and more organized way to work with asynchronous code compared to traditional callback functions.
 
 
-let promise = new Promise ( (resolve, reject) => {
-    console.log("This is promise in JS:");
-    resolve("Got it:");
-    reject("Error:");
-});
+// let promise = new Promise ( (resolve, reject) => {
+//     console.log("This is promise in JS:");
+//     resolve("Got it:");
+//     reject("Error:");
+// });
 
-//Another example of promise using Asynchronous 
+// //Another example of promise using Asynchronous 
 
-function data(id, nextdata) {
-    return new Promise ( (resolve, reject) => {
-        setTimeout( () => {
-            console.log("The data:",id);
-            resolve("Sucess:");
-            // reject("Error Occured:");
-            if(nextdata){
-                nextdata();
-            }
-        }
-        ,5000);
-    });
-}
+// function data(id, nextdata) {
+//     return new Promise ( (resolve, reject) => {
+//         setTimeout( () => {
+//             console.log("The data:",id);
+//             resolve("Sucess:");
+//             // reject("Error Occured:");
+//             if(nextdata){
+//                 nextdata();
+//             }
+//         }
+//         ,5000);
+//     });
+// }
 
-let vik = data(512);
+// let vik = data(512);
 
 
-// Then.() and Catch.()
+// .then() and .catch()
 //In JavaScript Promises, then and catch are methods used to handle
 //  the results of asynchronous operations when working with Promises.
 
+
+const pro = () => {
+    return new Promise((resolve, reject) => {
+        console.log("The Promise:");
+        resolve("Resolved:");
+        // reject("Rejected:");
+    })
+};
+
+
+let newpro = pro();
+newpro.then( (res) => {
+    console.log("The promise is successfully handled:", res);
+});
+
+newpro.catch( (err) => {
+    console.log("The promise is rejected:", err);
+});
