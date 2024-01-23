@@ -37,27 +37,43 @@
 // calculator(3,4,sum);
 
 
-//callback hell 
+// //callback hell 
 
-function getData(DataId, NextData) {
-    setTimeout( () => {
-        console.log("Data:", DataId)
-        if(NextData) {
-            NextData();
-        }
-    }, 2000);
-};
+// function getData(DataId, NextData) {
+//     setTimeout( () => {
+//         console.log("Data:", DataId)
+//         if(NextData) {
+//             NextData();
+//         }
+//     }, 2000);
+// };
 
-getData(1, () => {
-    getData(2, () => {
-        getData(3, () => {
-            getData(4, () => {
-                getData(5, () => {
-                    getData(6, () => {
-                        getData(7);
-                    })
-                })
-            })
-        })
-    });
+
+// //callback hell 
+// //Nested call backs stacked below one another forming a pyramid structure 
+// getData(1, () => {
+//     getData(2, () => {
+//         getData(3, () => {
+//             getData(4, () => {
+//                 getData(5, () => {
+//                     getData(6, () => {
+//                         getData(7);
+//                     })
+//                 })
+//             })
+//         })
+//     });
+// });
+
+
+
+// //Promises 
+// Promise is an object that represents the eventual completion or failure of 
+// an asynchronous operation and its resulting value. Promises provide a 
+// cleaner and more organized way to work with asynchronous code compared to traditional callback functions.
+
+
+let promise = new Promise ( (resolve, reject) => {
+    console.log("This is promise in JS:");
+    resolve("Got it:");
 });
