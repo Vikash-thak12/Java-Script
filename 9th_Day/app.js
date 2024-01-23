@@ -76,4 +76,29 @@
 let promise = new Promise ( (resolve, reject) => {
     console.log("This is promise in JS:");
     resolve("Got it:");
+    reject("Error:");
 });
+
+//Another example of promise using Asynchronous 
+
+function data(id, nextdata) {
+    return new Promise ( (resolve, reject) => {
+        setTimeout( () => {
+            console.log("The data:",id);
+            resolve("Sucess:");
+            // reject("Error Occured:");
+            if(nextdata){
+                nextdata();
+            }
+        }
+        ,5000);
+    });
+}
+
+let vik = data(512);
+
+
+// Then.() and Catch.()
+//In JavaScript Promises, then and catch are methods used to handle
+//  the results of asynchronous operations when working with Promises.
+
