@@ -98,25 +98,58 @@
 // let vik = data(512);
 
 
-// .then() and .catch()
-//In JavaScript Promises, then and catch are methods used to handle
-//  the results of asynchronous operations when working with Promises.
+// // .then() and .catch()
+// //In JavaScript Promises, then and catch are methods used to handle
+// //  the results of asynchronous operations when working with Promises.
 
 
-const pro = () => {
-    return new Promise((resolve, reject) => {
-        console.log("The Promise:");
-        resolve("Resolved:");
-        // reject("Rejected:");
+// const pro = () => {
+//     return new Promise((resolve, reject) => {
+//         console.log("The Promise:");
+//         resolve("Resolved:");
+//         // reject("Rejected:");
+//     })
+// };
+
+
+// let newpro = pro();
+// newpro.then( (res) => {
+//     console.log("The promise is successfully handled:", res);
+// });
+
+// newpro.catch( (err) => {
+//     console.log("The promise is rejected:", err);
+// });
+
+
+//Promise chain in JS
+
+
+function async1() {
+    return new Promise ( (resolve, reject) => {
+        setTimeout( () => {
+            console.log("Data: 1");
+            resolve("Success:");
+        }, 4000);
     })
 };
 
 
-let newpro = pro();
-newpro.then( (res) => {
-    console.log("The promise is successfully handled:", res);
-});
+function async2() {
+    return new Promise ( (resolve, reject) => {
+        setTimeout( () => {
+            console.log("Data: 2");
+            resolve("Success:");
+        }, 2000);
+    })
+};
 
-newpro.catch( (err) => {
-    console.log("The promise is rejected:", err);
+console.log("Fetching the data1.......");
+let fn1 = async1();
+fn1.then( () => {
+    console.log("Fetching the data2.......");
+    let fn2 = async2();
+    fn2.then( () => {
+
+    })
 });
