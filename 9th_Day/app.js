@@ -140,9 +140,19 @@ function async2() {
         setTimeout( () => {
             console.log("Data: 2");
             resolve("Success:");
+        }, 3000);
+    })
+};
+
+function async3() {
+    return new Promise ( (resolve, reject) => {
+        setTimeout( () => {
+            console.log("Data: 3");
+            resolve("Success:");
         }, 2000);
     })
 };
+
 
 console.log("Fetching the data1.......");
 let fn1 = async1();
@@ -150,6 +160,12 @@ fn1.then( () => {
     console.log("Fetching the data2.......");
     let fn2 = async2();
     fn2.then( () => {
+        console.log("Fetching the data3.......");
+        let fn3 = async3();
+        fn3.then( () => {
 
+        });
     })
 });
+
+// In the above program there is then inside then which is known as promise chain in java Script 
