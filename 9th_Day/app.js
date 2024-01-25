@@ -14,7 +14,7 @@
 // console.log("Five");
 // console.log("Six")
 
-// setTimeout( () => {
+// setTimeout(() => {
 //     console.log("Chal na a kaam karne de, Sarak wodhar:");
 // }, 2000);
 
@@ -26,23 +26,23 @@
 // // callback
 // // function passed as an argument in another functoin is known as callback 
 
-// function sum (a,b) {
-//     console.log(a+b);
+// function sum(a, b) {
+//     console.log(a + b);
 // };
 
-// function calculator (a,b,sumcallback) {  //here the sumcallback function is sum function which is called in another function so known as callback 
-//     sumcallback(a,b);
+// function calculator(a, b, sumcallback) {  //here the sumcallback function is sum function which is called in another function so known as callback 
+//     sumcallback(a, b);
 // }
 
-// calculator(3,4,sum);
+// calculator(3, 4, sum);
 
 
 // //callback hell 
 
 // function getData(DataId, NextData) {
-//     setTimeout( () => {
+//     setTimeout(() => {
 //         console.log("Data:", DataId)
-//         if(NextData) {
+//         if (NextData) {
 //             NextData();
 //         }
 //     }, 2000);
@@ -67,13 +67,13 @@
 
 
 
-// //Promises 
-// Promise is an object that represents the eventual completion or failure of 
-// an asynchronous operation and its resulting value. Promises provide a 
-// cleaner and more organized way to work with asynchronous code compared to traditional callback functions.
+// // //Promises 
+// // Promise is an object that represents the eventual completion or failure of 
+// // an asynchronous operation and its resulting value. Promises provide a 
+// // cleaner and more organized way to work with asynchronous code compared to traditional callback functions.
 
 
-// let promise = new Promise ( (resolve, reject) => {
+// let promise = new Promise((resolve, reject) => {
 //     console.log("This is promise in JS:");
 //     resolve("Got it:");
 //     reject("Error:");
@@ -82,16 +82,16 @@
 // //Another example of promise using Asynchronous 
 
 // function data(id, nextdata) {
-//     return new Promise ( (resolve, reject) => {
-//         setTimeout( () => {
-//             console.log("The data:",id);
+//     return new Promise((resolve, reject) => {
+//         setTimeout(() => {
+//             console.log("The data:", id);
 //             resolve("Sucess:");
 //             // reject("Error Occured:");
-//             if(nextdata){
+//             if (nextdata) {
 //                 nextdata();
 //             }
 //         }
-//         ,5000);
+//             , 5000);
 //     });
 // }
 
@@ -113,59 +113,84 @@
 
 
 // let newpro = pro();
-// newpro.then( (res) => {
+// newpro.then((res) => {
 //     console.log("The promise is successfully handled:", res);
 // });
 
-// newpro.catch( (err) => {
+// newpro.catch((err) => {
 //     console.log("The promise is rejected:", err);
 // });
 
 
-//Promise chain in JS
+// //Promise chain in JS
 
 
-function async1() {
-    return new Promise ( (resolve, reject) => {
-        setTimeout( () => {
-            console.log("Data: 1");
-            resolve("Success:");
-        }, 4000);
-    })
-};
+// function async1() {
+//     return new Promise((resolve, reject) => {
+//         setTimeout(() => {
+//             console.log("Data: 1");
+//             resolve("Success:");
+//         }, 4000);
+//     })
+// };
 
 
-function async2() {
-    return new Promise ( (resolve, reject) => {
-        setTimeout( () => {
-            console.log("Data: 2");
-            resolve("Success:");
-        }, 3000);
-    })
-};
+// function async2() {
+//     return new Promise((resolve, reject) => {
+//         setTimeout(() => {
+//             console.log("Data: 2");
+//             resolve("Success:");
+//         }, 3000);
+//     })
+// };
 
-function async3() {
-    return new Promise ( (resolve, reject) => {
-        setTimeout( () => {
-            console.log("Data: 3");
-            resolve("Success:");
-        }, 2000);
-    })
-};
+// function async3() {
+//     return new Promise((resolve, reject) => {
+//         setTimeout(() => {
+//             console.log("Data: 3");
+//             resolve("Success:");
+//         }, 2000);
+//     })
+// };
 
 
-console.log("Fetching the data1.......");
-let fn1 = async1();
-fn1.then( () => {
-    console.log("Fetching the data2.......");
-    let fn2 = async2();
-    fn2.then( () => {
-        console.log("Fetching the data3.......");
-        let fn3 = async3();
-        fn3.then( () => {
+// console.log("Fetching the data1.......");
+// let fn1 = async1();
+// fn1.then(() => {
+//     console.log("Fetching the data2.......");
+//     let fn2 = async2();
+//     fn2.then(() => {
+//         console.log("Fetching the data3.......");
+//         let fn3 = async3();
+//         fn3.then(() => {
 
-        });
-    })
-});
+//         });
+//     })
+// });
 
 // In the above program there is then inside then which is known as promise chain in java Script 
+
+
+
+//Another example of chain Promise 
+function getData1(id, nedata) {
+    return new Promise((resolve, reject) => {
+        setTimeout( () => {
+            console.log("dataID", id);
+            resolve("Success");
+        }, 3000)
+    })
+}
+
+getData1(1).then((res) => {
+    console.log(res);
+    getData1(2).then( (res) => {
+        console.log(res);
+        getData1(3).then( (res) => {
+            console.log(res);
+            getData1(4).then((res) => {
+                console.log(res);
+            })
+        })
+    })
+});
