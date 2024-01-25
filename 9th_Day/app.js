@@ -194,3 +194,9 @@ getData1(1).then((res) => {
         })
     })
 });
+
+
+
+// //Async-Await
+// Async/await is a feature in JavaScript that allows you to work 
+// with asynchronous code in a more synchronous-like manner
