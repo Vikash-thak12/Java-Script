@@ -223,3 +223,16 @@ async function getweatherdata() {
     console.log("Getting data 5....");
     await api(5);
 }
+
+//IIFE: Immediately Invoked Function Expression 
+// used to avoid calling Async-Await function 
+// syntax: (function)();
+
+(async function getweatherdata() {
+    console.log("Getting data 6....");
+    await api(6);
+    console.log("Getting data 7....");
+    await api(7);
+    console.log("Getting data 8....");
+    await api(8);
+}) ();
