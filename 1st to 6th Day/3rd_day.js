@@ -17,7 +17,7 @@ for (var i=1; i<9; i++)
 
 // finding sum of 1 to n numbers 
 
-let n = prompt("Enter the value you want to find up that number:");
+let n = prompt("Enter the value you want to find the sum up that number:");
 let sum = 0;
 for (let i =1; i<= n; i++)
 {

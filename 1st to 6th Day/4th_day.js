@@ -3,7 +3,7 @@ let marks = [23, 45, 54, 67, 85];
 console.log(marks);
 
 let actors = ["salman khan", "Akshay kumar", "Prabhash", "Yash", "Ram Charan", "Jr. NTR"];
-console.log(actors);     //array is also known as object as there will key and their values in the array key will be index and value you know:
+console.log(actors);     //array is also known as object as there will be key and their values in the array key will be index and value you know:
 
 
 console.log(actors[3]);
@@ -79,7 +79,7 @@ console.log("Price after discount is: ",items);
 // pop() -> delete from the end & return 
 // toString() => convert array to sting 
 // concat() -> to join multiple arrays & returns result 
-// unshit() -> add to start (act as push )
+// unshift() -> add to start (act as push )
 // shift() -> delete from start & return ( act as pop )
 
 

@@ -177,7 +177,7 @@ let age2 = 20;
 age2 >= 18 ? console.log("Older ") : console.log("Younger");
 
 let age3 = 10;
-let result = age3>= 18 ? "Adult" : "Not adult";
+let result = age3 >= 18 ? "Adult" : "Not adult";
 console.log(result);
 
 
@@ -187,13 +187,13 @@ console.log(result);
 // get user to input a number using prompt("Enter the number:"). Check if the number is multiple of 5 or No:
 
 let num1 = prompt("Enter the number:");
-if(num1%5 == 0)
+if(num1%5 === 0)
 {
-    console.log(num, " is multiple of 5");
+    console.log(num1, " is a multiple of 5");
 }
 else 
 {
-    console.log(num, "is not multiple of 5:");
+    console.log(num1, "is not a multiple of 5:");
 }
 
 // 2nd question:
@@ -221,9 +221,13 @@ else if(mark >= 40 && mark < 60)
 {
     grade = "D";
 }
-else 
+else if(mark >= 0 && mark <40 )
 {
     grade = "Fail";
+}
+else 
+{
+    grade = "Out of the range: Please enter the marks in between 0 to 100:";
 }
 
 console.log("According to your marks, Your grade is ", grade);
