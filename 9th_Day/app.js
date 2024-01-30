@@ -168,35 +168,58 @@
 //     })
 // });
 
-// In the above program there is then inside then which is known as promise chain in java Script 
+// // In the above program there is then inside then which is known as promise chain in java Script 
 
 
 
-//Another example of chain Promise 
-function getData1(id, nedata) {
-    return new Promise((resolve, reject) => {
-        setTimeout( () => {
-            console.log("dataID", id);
-            resolve("Success");
-        }, 3000)
-    })
-}
+// //Another example of chain Promise 
+// function getData1(id, nedata) {
+//     return new Promise((resolve, reject) => {
+//         setTimeout( () => {
+//             console.log("dataID", id);
+//             resolve("Success");
+//         }, 3000)
+//     })
+// }
 
-getData1(1).then((res) => {
-    console.log(res);
-    getData1(2).then( (res) => {
-        console.log(res);
-        getData1(3).then( (res) => {
-            console.log(res);
-            getData1(4).then((res) => {
-                console.log(res);
-            })
-        })
-    })
-});
+// getData1(1).then((res) => {
+//     console.log(res);
+//     getData1(2).then( (res) => {
+//         console.log(res);
+//         getData1(3).then( (res) => {
+//             console.log(res);
+//             getData1(4).then((res) => {
+//                 console.log(res);
+//             })
+//         })
+//     })
+// });
 
 
 
 // //Async-Await
 // Async/await is a feature in JavaScript that allows you to work 
 // with asynchronous code in a more synchronous-like manner
+
+function api(data) {
+
+    return new Promise( (resolve, reject) => {
+        setTimeout(() => {
+        console.log("Weather data:", data);
+        resolve("Success:")
+        },3000);
+    }) 
+}
+
+async function getweatherdata() {
+    console.log("Getting data 1....");
+    await api(1);
+    console.log("Getting data 2....");
+    await api(2);
+    console.log("Getting data 3....");
+    await api(3);
+    console.log("Getting data 4....");
+    await api(4);
+    console.log("Getting data 5....");
+    await api(5);
+}
