@@ -62,7 +62,7 @@ function countVowels(str)
 }
 
 
-// create an arrow function to to perfrom the same task
+// create an arrow function to perfrom the same task
 
 const countvowel = (str) =>
 {
