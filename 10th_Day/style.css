@@ -1,0 +1,15 @@
+#btn
+{
+    height: 50px;
+    border: 2px solid black;
+    border-radius: 20px;
+    color: white;
+    background-color: black;
+}
+
+#btn:hover
+{
+    cursor: pointer;
+    background-color: aqua;
+    color: black;
+}
