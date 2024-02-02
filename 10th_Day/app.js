@@ -5,11 +5,17 @@ const btn = document.querySelector("#btn");
 const test = document.querySelector(".test");
 
 
-  //innertext 
+// innertext 
+//   It returns the visible text content of an element,
+//   excluding any styles or hidden elements.It takes into account CSS styles and may also
+//   handle layout - related issues.
   const res1 = document.querySelector("#real").innerText;
   console.log(res1);
 
-  //textContent
+
+//textContent
+//  It returns all text content, including hidden elements and styles.
+//  It does not consider the visibility or layout of the elements.
   const res2 = document.querySelector("#real").textContent;
   console.log(res2);
 
