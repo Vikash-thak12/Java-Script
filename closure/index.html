@@ -10,6 +10,10 @@
 <body bgcolor="#313131">
     <button id="orange">Orange</button>
     <button id="green">Green</button>
+    <button id="blue">Blue</button>
+    <button id="red">Red</button>
+    <button id="yellow">Yellow</button>
+    <button id="gray">Gray</button>
 
 </body>
 <!-- <script>
@@ -31,13 +35,17 @@
 <script>
 
     function colorchange(color) {
-        return function(){
+        return function() {
             document.body.style.backgroundColor = `${color}`;
         }
     }
+    document.querySelector("#gray").onclick = colorchange("gray");
     document.querySelector("#orange").onclick = colorchange("orange");
+    document.querySelector("#yellow").onclick = colorchange("yellow");
+    document.querySelector("#blue").onclick = colorchange("blue");
     document.querySelector("#green").onclick = colorchange("Green");
-
+    document.querySelector("#red").onclick = colorchange("red");
+    
 </script>
 
 </html>
