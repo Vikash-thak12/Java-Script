@@ -7,7 +7,26 @@
     <title>Events in JS</title>
 </head>
 <body>
-    
+    <div class="main">
+        <ul>
+            <li>Troll</li>
+            <li>Troll</li>
+            <li>Troll</li>
+            <li id="img1"><img src="img.jpg" alt="">Image</li>
+        </ul>
+    </div>
     <script src="app.js"></script>
+    <script>
+        const a = document.querySelector(".main");
+        const b = document.querySelector("#img1");
+
+        a.addEventListener("click", (e) => {
+            console.log("Main is clicked:")
+        }, true)
+
+        b.addEventListener("click", (e) => {
+            console.log("Li is clicked:")
+        }, true);
+    </script>
 </body>
 </html>
