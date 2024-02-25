@@ -4,7 +4,7 @@ const newArr = arr.map( (item) => {
     return item + 10;
 })
 
-// console.log(newArr);
+console.log(newArr);
 
 const secondArr = arr.map( (item) => {
     return item * 10;
@@ -23,4 +23,4 @@ fruits.set("apples", 500);
 fruits.set("bananas", 300);
 fruits.set("oranges", 200);
 
-// console.log(fruits)
+console.log(fruits)
